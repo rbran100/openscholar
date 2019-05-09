@@ -173,8 +173,7 @@ class RoboFile extends \Robo\Tasks
 
         $tasks[] = $this->taskExec('docker-compose --verbose pull --parallel');
         $tasks[] = $this->taskExec('docker-compose up -d');
-        $tasks[] = $this->taskExec('docker-compose exec -T php composer self-update');
-        //$tasks[] = $this->taskExec('docker-compose exec -T php rm /home/wodby/.composer/cache/files');
+        $tasks[] = $this->taskExec('docker-compose exec -T php chmod -R 777 /home/wodby/.composer');
         $tasks[] = $this->taskExec('docker-compose exec -T php ln -s /home/wodby/docker-cache /home/wodby/.composer/cache/files');
         $tasks[] = $this->taskExec('make');
         $tasks[] = $this->taskExec('docker-compose exec -T php cp .travis/config/phpunit.xml web/core/phpunit.xml');
