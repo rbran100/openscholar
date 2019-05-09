@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-chmod -R 777 /home/wodby/.composer
+rm  /home/wodby/.composer/cache/files
+ln -s /home/wodby/docker-cache /home/wodby/.composer/cache/files
