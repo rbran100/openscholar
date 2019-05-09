@@ -39,6 +39,7 @@ env:
 
 before_install:
   - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+  - chmod -R 0777 .travis/docker-cache
 
 install:
   - composer global require consolidation/robo
