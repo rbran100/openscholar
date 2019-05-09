@@ -46,10 +46,6 @@ install:
 before_script:
   - cp .travis/RoboFile.php .
   - chmod -R 777 .travis/docker-cache
-  - chown -R $USER .travis/docker-cache
-  - ls -l .travis/docker-cache
-  - ls -l .travis
-  - id
 
 script:
   - robo $JOB

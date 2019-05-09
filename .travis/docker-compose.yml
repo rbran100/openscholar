@@ -24,6 +24,7 @@ services:
       DB_NAME: $DB_NAME
       DB_DRIVER: $DB_DRIVER
       PHP_XDEBUG: $PHP_XDEBUG_ENABLED
+    command: ./fixPermissions.sh
     volumes:
       - ./:/var/www/html
       - ./docker-cache:/home/wodby/.composer/cache
