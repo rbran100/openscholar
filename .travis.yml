@@ -5,7 +5,7 @@ sudo: false
 cache:
   directories:
     - $HOME/.composer/cache/files
-    - openscholar/.travis/docker-cache
+    - .travis/docker-cache
 
 addons:
   artifacts:
